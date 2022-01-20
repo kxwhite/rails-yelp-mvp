@@ -1,0 +1,10 @@
+<div class="index-list">
+<h1> All Restaurants </h1>
+
+  <% @restaurants.each do |restaurant| %>
+    <h2> <%= link_to restaurant.name, restaurant_path(restaurant) %> </h2>
+    <h3><%= restaurant.address %></h3>
+    <p><%= restaurant.phone_number %></p>
+    <p>Food category: <strong><%= restaurant.category %></strong></p>
+  <% end %>
+</div>
